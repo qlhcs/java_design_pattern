@@ -1,4 +1,4 @@
-package com.tesla.creational.simpleFactory;
+package com.tesla.creational.simpleFactory.p3_5;
 
 public abstract class Shape {
 

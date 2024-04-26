@@ -1,6 +1,6 @@
-package com.tesla.creational.simpleFactory;
+package com.tesla.creational.simpleFactory.p3_5;
 
-public class Triangle extends Shape {
+public class Circle extends Shape {
 
     @Override
     public void draw() {
