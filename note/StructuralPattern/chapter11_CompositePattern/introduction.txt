@@ -1,0 +1,12 @@
+关键词：
+    树形结构
+适用场景 / 优点：
+    统一处理 整体-部分关系 的结构（树形结构）
+缺点：
+    由于Component有多个实现，所以对于需要区分具体实现类型的场景，需要做类型检查。（场景举例：要求某个文件夹下只允许有文件，不能有文件夹）
+个人想法：
+    如果所有节点都只有一个类型，则可以不用Component和Leaf，直接让Composite聚合自己，叶子结点中childrenList是个空数组。
+    代码：
+        public class Composite {
+            private List<Composite> childrenList;
+        }
