@@ -2,22 +2,24 @@ package com.tesla;
 
 import com.tesla.creational.prototype.p7_4.DataChart;
 import com.tesla.creational.prototype.p7_4.DataSet;
+import com.tesla.structural.flyweight.p14_4.FlyweightFactory;
+import com.tesla.structural.flyweight.p14_4.NetworkDevice;
 
 import java.util.Objects;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        DataChart dataChart = new DataChart();
-        dataChart.setDataSet(new DataSet());
-        dataChart.setColor("red");
-        dataChart.setNumber("12312");
+        FlyweightFactory factory = FlyweightFactory.getInstance();
+        NetworkDevice switcher1 = factory.getFlyWeight("switcher");
+        NetworkDevice switcher2 = factory.getFlyWeight("switcher");
 
-        DataChart cloneDataChart = dataChart.deepClone();
+        System.out.println(switcher1 == switcher2);
 
-        System.out.println(dataChart == cloneDataChart);
-        System.out.println(dataChart.getDataSet() == cloneDataChart.getDataSet());
-        System.out.println(dataChart.getColor() == cloneDataChart.getColor());
-        System.out.println(dataChart.getNumber() == cloneDataChart.getNumber());
+        switcher1.use("8080");
+
+        NetworkDevice collector = factory.getFlyWeight("collector");
+        collector.use("8888");
+
     }
 
 }
