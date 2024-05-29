@@ -1,8 +1,8 @@
 package com.tesla.creational.abstractFactory.p5_6.levelStructure;
 
-import com.tesla.creational.abstractFactory.p5_6.AbstractInterfaceProduct;
-import com.tesla.creational.abstractFactory.p5_6.AbstractOperationProduct;
-import com.tesla.creational.abstractFactory.p5_6.AbstractOperationSystemFactory;
+import com.tesla.creational.abstractFactory.p5_6.abstractProduct.AbstractInterfaceProduct;
+import com.tesla.creational.abstractFactory.p5_6.abstractProduct.AbstractOperationProduct;
+import com.tesla.creational.abstractFactory.p5_6.abstractFactory.AbstractOperationSystemFactory;
 
 public class AndroidFactory extends AbstractOperationSystemFactory {
 

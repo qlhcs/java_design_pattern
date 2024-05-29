@@ -1,5 +1,8 @@
 package com.tesla.creational.simpleFactory.p3_5;
 
+/**
+ * 唯一的工厂
+ */
 public class ShapeFactory {
 
     public Shape produceShape(Integer shapeType) throws Exception {
