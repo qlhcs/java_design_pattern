@@ -12,8 +12,12 @@ public class Director {
     }
 
     public Computer construct() {
-        abstractBuilder.setComputer();
-        return abstractBuilder.build();
+        abstractBuilder.buildCPU();
+        abstractBuilder.buildMemory();
+        abstractBuilder.buildHardDisk();
+        abstractBuilder.buildMainBoard();
+        abstractBuilder.buildDisplayer();
+        return abstractBuilder.buildComputer();
     }
 
 
