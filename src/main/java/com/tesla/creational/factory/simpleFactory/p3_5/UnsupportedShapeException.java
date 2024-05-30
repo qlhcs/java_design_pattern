@@ -1,4 +1,4 @@
-package com.tesla.creational.simpleFactory.p3_5;
+package com.tesla.creational.factory.simpleFactory.p3_5;
 
 public class UnsupportedShapeException extends RuntimeException {
 

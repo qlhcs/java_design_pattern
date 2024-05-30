@@ -1,4 +1,4 @@
-package com.tesla.creational.factoryMethod.p4_6;
+package com.tesla.creational.factory.factoryMethod.p4_6;
 
 public abstract class Converter {
 
