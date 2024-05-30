@@ -6,13 +6,17 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 import java.util.Arrays;
 
+/**
+ * JDK动态代理核心类：InvocationHandler -- 被代理者、Proxy -- 代理者
+ */
 public class Test {
 
     public static void testProxy() {
-        UserServiceImpl userService = new UserServiceImpl();
+        // 加强userServiceImpl
+        UserServiceImpl userServiceImpl = new UserServiceImpl();
         UserService service = (UserService) Proxy.newProxyInstance(UserServiceImpl.class.getClassLoader(),
                 UserServiceImpl.class.getInterfaces(),
-                new CustomInvocationHandler(userService));
+                new CustomInvocationHandler(userServiceImpl));
         service.create();
     }
 

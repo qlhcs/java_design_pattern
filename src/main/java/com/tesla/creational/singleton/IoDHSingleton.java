@@ -24,5 +24,11 @@ public class IoDHSingleton {
         private final static IoDHSingleton instance = new IoDHSingleton();
     }
 
+    /**
+     * 第一次调用，才会给IoDHSingleton对象分配内存，JVM能保证线程安全性
+     */
+    public static IoDHSingleton getInstance() {
+        return HolderClass.instance;
+    }
 
 }
